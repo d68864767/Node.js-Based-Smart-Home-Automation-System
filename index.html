@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Smart Home Automation</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header>
+        <h1>Smart Home Automation</h1>
+    </header>
+    <main>
+        <section id="device-control">
+            <h2>Device Control</h2>
+            <form id="device-control-form">
+                <label for="device">Device:</label>
+                <select id="device">
+                    <!-- Options will be populated dynamically -->
+                </select>
+                <label for="command">Command:</label>
+                <input type="text" id="command" placeholder="Enter command">
+                <button type="submit">Send Command</button>
+            </form>
+        </section>
+        <section id="voice-command">
+            <h2>Voice Command</h2>
+            <button id="start-recording">Start Recording</button>
+            <button id="stop-recording" disabled>Stop Recording</button>
+        </section>
+        <section id="energy-consumption">
+            <h2>Energy Consumption</h2>
+            <div id="energy-data">
+                <!-- Energy data will be displayed here -->
+            </div>
+        </section>
+        <section id="device-status">
+            <h2>Device Status</h2>
+            <div id="status-data">
+                <!-- Device status will be displayed here -->
+            </div>
+        </section>
+    </main>
+    <script src="/socket.io/socket.io.js"></script>
+    <script src="script.js"></script>
+</body>
+</html>
